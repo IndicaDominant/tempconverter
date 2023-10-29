@@ -1,0 +1,54 @@
+body{
+    background-color: lightblue;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 100%;
+}
+
+.roasted-turkey{
+    width: 90%;
+    margin-left: 5%;
+}
+
+h1{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+h2{
+    text-align: center;
+}
+
+.container2{
+    display: flex;
+    align-items: center;
+}
+
+.f_to_c{
+    text-align: center;
+    width: 50%;
+}
+
+.c_to_f{
+    text-align:center;
+    width: 50%;
+}
+
+@media (max-width: 500px) {
+    .container2{
+        flex-direction: column;
+    }
+
+    h1, h2{
+        font-size: 100%;
+    }
+
+}

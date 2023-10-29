@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's the Equivalent in F/C?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="title">❤️ Isabelle and Erek's Temperature Converter 🌡️</h1>
+    <h2> ☃️ For Weather and Cooking 🍗 </h2>
+    <div class="container">
+        <div><img class="cold-pic card" src="./assets/cold_weather.jpg" alt="snow"></div>
+        <div><img class="card roasted-turkey" src="./assets/roasted_turkey.jpg" alt=""></div>
+        <div><img class="hot-pic card" src="./assets/hot_weather.jpg" alt="heat"></div>
+    </div>
+
+    <div class="container2">
+        <div class="f_to_c">
+            <h2>Daddy to babygirl</h2>
+            <p>Enter the temperature in Fahrenheit:</p>
+            <input type="number" id="farenheit"></input>
+            <button type="button" onclick="doConversionFtoC();">Convert</button>
+            <h4 id="result">Result displayed here</h4>
+        </div>
+        <div class="c_to_f">
+            <h2>babygirl to Daddy</h2>
+            <p>Enter the temperature in Centigrade:</p>
+            <input type="number" id="centigrade"></input>
+            <button type="button" onclick="doConversionCtoF();">Convert</button>
+            <h4 id="result2">Result displayed here</h4>
+        </div>
+    </div>
+
+    <script>
+        function doConversionFtoC(){
+            var fahrenheit = document.getElementById("farenheit");
+            var fahrenheit = fahrenheit.value;
+
+            var celcius = (fahrenheit - 32)/1.8;
+            var celcius = celcius.toFixed(1);
+            var resultElement = document.getElementById("result");
+            resultElement.innerText = "= " + celcius + "° in Centigrade";
+        }
+
+        function doConversionCtoF(){
+            var centigrade = document.getElementById("centigrade")
+            var centigrade = centigrade.value;
+
+            var fahrenheit2 = (centigrade * (9/5)) + 32
+            var fahrenheit2 = fahrenheit2.toFixed(1);
+            var resultElement2 = document.getElementById("result2");
+            resultElement2.innerText = "= " + fahrenheit2 + "° in Fahrenheit";
+        }
+    </script>
+</body>
+</html>
